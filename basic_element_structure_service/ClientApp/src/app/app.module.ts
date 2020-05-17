@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ElementDataComponent } from './element-data/element-data.component';
 import { RequestServices } from './services/requestServices';
+import { NavigationService}from './services/navigationService'
 import { AddElementComponent } from './add-element/add-element.component'
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AddElementComponent } from './add-element/add-element.component'
     ])
   ],
   providers: [
-    RequestServices
+    RequestServices,
+    NavigationService
   ],
   bootstrap: [AppComponent]
 })

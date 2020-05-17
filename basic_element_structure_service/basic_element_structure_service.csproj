@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\models\Element.ts" />
+    <None Remove="ClientApp\src\app\services\navigationService.ts" />
     <None Remove="ClientApp\src\app\services\requestServices.ts" />
   </ItemGroup>
 
@@ -42,6 +43,7 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\models\Element.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\services\navigationService.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\requestServices.ts" />
   </ItemGroup>
 

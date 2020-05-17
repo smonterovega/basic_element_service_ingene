@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Element } from "../models/Element"
-import {Router,ActivatedRoute} from "@angular/router"
 import {RequestServices} from "../services/requestServices"
+import {NavigationService} from "../services/navigationService"
 import { getBaseUrl } from '../../main';
 @Component({
   selector: 'app-add-element',
@@ -10,7 +10,7 @@ import { getBaseUrl } from '../../main';
 })
 export class AddElementComponent implements OnInit {
   constructor(private _reqService: RequestServices,
-    private _routerService:Router
+    private _navService:NavigationService
   ) {
     this.newElement = new Element();
   }
@@ -23,7 +23,7 @@ export class AddElementComponent implements OnInit {
     {
       if (result)
       {
-        this._routerService.navigate(["/element-data"]);
+        this._navService.goToElementDataComponent();
       }
 
     });
