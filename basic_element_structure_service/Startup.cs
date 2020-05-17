@@ -7,6 +7,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using basic_element_database;
+using basic_element_database.Repository.Interfaces;
+using basic_element_database.Repository;
+using basic_element_database.Elements;
+using basic_element_database.Respository;
 
 namespace basic_element_structure_service
 {
@@ -24,7 +28,7 @@ namespace basic_element_structure_service
         {
             services.AddControllersWithViews();
             services.AddDbContext<BasicElementDbContext>(options =>
-                options.UseSqlServer(Configuration["cdjs-database-key"])
+                options.UseSqlServer(Configuration["MoleCool-database-key"],b=> b.MigrationsAssembly("basic_element_structure_service"))
                 );
 
             // In production, the Angular files will be served from this directory
@@ -32,6 +36,7 @@ namespace basic_element_structure_service
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.AddScoped<IRepositoryBase<Element>, ElementRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

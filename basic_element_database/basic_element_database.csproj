@@ -119,6 +119,7 @@
     <Compile Include="BasicElementDbContext.cs" />
     <Compile Include="Elements\Element.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Respository\ElementRepository.cs" />
     <Compile Include="Respository\Interfaces\IRepositoryBase.cs" />
     <Compile Include="Respository\RepositoryBase.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
