@@ -1,7 +1,7 @@
 <div class="alert alert-info" style="align-content:center">
   <h1>Elements</h1>
 </div>
-<a class="btn btn-success" >
+<a class="btn btn-success" [routerLink]='["/add-element"]'>
   Add Elements
 </a>
 <table class="table" *ngIf="showElementList">
@@ -15,7 +15,7 @@
   <tbody>
     <tr *ngFor="let element of allElements">
       <td>{{element.name}}</td>
-      <td>{{element.maxNumberOfBound}}</td>
+      <td>{{element.maxNumberOfBond}}</td>
       <td>{{chargeToString[element.charge]}}</td>
     </tr>
   </tbody>

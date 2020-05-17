@@ -19,20 +19,21 @@ namespace basic_element_structure_service.Controllers
         [HttpGet("getallelement")]
         public async Task<IEnumerable<Element>> getallElement() 
         {
-            return new List<Element>
-            {
-                new Element {Name = "Carbon",MaxNumberOfBound = 4, Charge = Charge.Zero},
-                new Element{Name = "Oxygen",MaxNumberOfBound =2, Charge = Charge.Negative },
-                new Element{Name = "Nitrogen",MaxNumberOfBound =2, Charge = Charge.Negative }
-            };
-            //return await _elementRepo.FindAll();
+            return await _elementRepo.FindAll();
         }
-        [HttpPost("CreateElement")]
-        public async Task<bool> CreateElement([FromBody] Element element) 
+        [HttpPost("addelement")]
+        public async Task<bool> CreateElement([FromBody] elementRequestModel element) 
         {
             try 
             {
-                await _elementRepo.Create(element);
+                var newElement = new Element
+                {
+                    Name = element.Name,
+                    MaxNumberOfBond = element.MaxNumberOfBonds,
+                    Charge = (Charge)Int32.Parse(element.Charge)
+                };
+                await _elementRepo.Create(newElement);
+                await _elementRepo.Save();
                 return true;
             }
             catch(Exception ex) 

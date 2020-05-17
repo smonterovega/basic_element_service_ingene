@@ -19,6 +19,6 @@ export class RequestServices {
     return this.http.get<Element[]>("api/ElementDatabase/getallelement");
   }
   createElement(element: Element): Observable<boolean> {
-    return this.http.post<boolean>('api/ElementDatabase/CreateElement', element, HTTP_OPTION);
+    return this.http.post<boolean>('api/ElementDatabase/addelement', element, HTTP_OPTION);
   }
 }

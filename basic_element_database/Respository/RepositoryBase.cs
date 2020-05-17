@@ -34,6 +34,11 @@ namespace basic_element_database.Repository {
             return _repoContext.Set<T>().Where(expression).AsNoTracking();
         }
 
+        public async Task Save()
+        {
+            await _repoContext.SaveChangesAsync();
+        }
+
         public async Task Update(T entity)
         {
             _repoContext.Set<T>().Update(entity);

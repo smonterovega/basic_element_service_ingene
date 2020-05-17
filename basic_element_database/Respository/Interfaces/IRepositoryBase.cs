@@ -13,5 +13,6 @@ namespace basic_element_database.Repository.Interfaces
         Task Create(T entity);
         Task Update(T entity);
         Task Delete(T entity);
+        Task Save();
     }
 }

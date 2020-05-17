@@ -1,1 +1,23 @@
-<p>add-element works!</p>
+<div class="alert alert-info" style="align-content:center">
+  <h3>Add Element</h3>
+</div>
+<form #addElement ="ngForm" (submit)="addNewElement(newElement)">
+  <div class="form-row">
+    <div class="col">
+      <input type="text" required class="form-control" placeholder="Element Name" name="Name"  [(ngModel)]="newElement.Name" >
+    </div>
+    <div class="col">
+      <input type="number" required class="form-control" placeholder="Max Number of bonds" name="MaxNumberOfBonds" [(ngModel)]="newElement.MaxNumberOfBonds">
+    </div>
+    <div class="col">
+      <select class="form-control" name="Charge" [(ngModel)]="newElement.Charge">
+        <option value="0">Zero</option>
+        <option value="1">Positive</option>
+        <option value="2">Negative</option>
+      </select>
+    </div>
+  </div>
+  <button style="margin-top:15px" type="submit" class="btn btn-primary">
+    Add Element
+  </button>
+</form>

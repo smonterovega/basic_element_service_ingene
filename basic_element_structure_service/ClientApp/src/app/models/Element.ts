@@ -1,6 +1,6 @@
 export class Element{
   Name: string;
-  MaxNumberOfBound: Int16Array;
+  MaxNumberOfBonds: Int32Array;
   Charge: charge
 }
 
