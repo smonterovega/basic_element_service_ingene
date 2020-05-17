@@ -1,0 +1,22 @@
+<div class="alert alert-info" style="align-content:center">
+  <h1>Elements</h1>
+</div>
+<a class="btn btn-success" >
+  Add Elements
+</a>
+<table class="table" *ngIf="showElementList">
+  <thead>
+    <tr>
+      <td>Element Name</td>
+      <td>Max number of bonds</td>
+      <td>Charge</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let element of allElements">
+      <td>{{element.name}}</td>
+      <td>{{element.maxNumberOfBound}}</td>
+      <td>{{chargeToString[element.charge]}}</td>
+    </tr>
+  </tbody>
+</table>
