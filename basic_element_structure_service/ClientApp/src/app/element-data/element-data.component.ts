@@ -8,7 +8,7 @@ import {Element, charge} from "../models/Element"
 })
 export class ElementDataComponent implements OnInit {
 
-  private allElements: Element[];
+  public allElements: Element[];
   chargeToString = charge;
   private showElementList: boolean = true;
   constructor(private _requestService: RequestServices) {
