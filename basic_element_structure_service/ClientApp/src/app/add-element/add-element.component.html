@@ -1,7 +1,7 @@
 <div class="alert alert-info" style="align-content:center">
   <h3>Add Element</h3>
 </div>
-<form #addElement ="ngForm" (submit)="addNewElement(newElement)">
+<form #addElement ="ngForm" (submit)="addNewElement()">
   <div class="form-row">
     <div class="col">
       <input type="text" required class="form-control" placeholder="Element Name" name="Name"  [(ngModel)]="newElement.Name" >
