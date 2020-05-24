@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "basic_element_database", "basic_element_database\basic_element_database.csproj", "{3FF3C0DE-488C-40CC-AD43-5D9A21C0F327}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "basic_element_structure_service", "basic_element_structure_service\basic_element_structure_service.csproj", "{A32E0F1D-750F-4650-8209-3E7A1D05D6A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "basic_element_structure_service", "basic_element_structure_service\basic_element_structure_service.csproj", "{A32E0F1D-750F-4650-8209-3E7A1D05D6A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "basic_element_database_firebase", "basic_element_database_firebase\basic_element_database_firebase.csproj", "{EC7381CC-4632-4D11-A4AB-B70717069066}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A32E0F1D-750F-4650-8209-3E7A1D05D6A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A32E0F1D-750F-4650-8209-3E7A1D05D6A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A32E0F1D-750F-4650-8209-3E7A1D05D6A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC7381CC-4632-4D11-A4AB-B70717069066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC7381CC-4632-4D11-A4AB-B70717069066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC7381CC-4632-4D11-A4AB-B70717069066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC7381CC-4632-4D11-A4AB-B70717069066}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
