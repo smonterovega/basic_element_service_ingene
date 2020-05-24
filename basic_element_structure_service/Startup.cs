@@ -1,16 +1,14 @@
+using basic_element_database;
+using basic_element_database.Elements;
+using basic_element_database.Repository.Interfaces;
+using basic_element_database.Respository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using basic_element_database;
-using basic_element_database.Repository.Interfaces;
-using basic_element_database.Repository;
-using basic_element_database.Elements;
-using basic_element_database.Respository;
 
 namespace basic_element_structure_service
 {
