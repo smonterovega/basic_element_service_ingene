@@ -1,5 +1,6 @@
 ﻿using basic_element_database.Elements;
 using basic_element_database.Repository.Interfaces;
+using basic_element_database_firebase.DataAdapter;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace basic_element_structure_service.Controllers
     public class ElementDatabaseController : ControllerBase
     {
         private readonly IRepositoryBase<Element> _elementRepo;
+        private readonly ElementsDataAdapter _firebaseElement = new ElementsDataAdapter(); 
         public ElementDatabaseController(IRepositoryBase<Element> repo)
         {
             _elementRepo = repo;
@@ -19,6 +21,7 @@ namespace basic_element_structure_service.Controllers
         [HttpGet("getallelement")]
         public async Task<IEnumerable<Element>> getallElement() 
         {
+            var result = _firebaseElement.GetAllElements();
             return await _elementRepo.FindAll();
         }
         [HttpPost("addelement")]

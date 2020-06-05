@@ -349,3 +349,5 @@ healthchecksdb
 /basic_element_structure_service/ClientApp/src/app/fetch-data
 /basic_element_structure_service/ClientApp/src/app/counter
 /basic_element_structure_service/.config
+/basic_element_database_firebase/appsettings.json
+/basic_element_database_firebase/appsettings.Development.json
